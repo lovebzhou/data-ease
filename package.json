@@ -4,7 +4,8 @@
   "description": "",
   "private": true,
   "workspaces": [
-    "projects",
+    "projects/*",
+    "demos/*",
     "packages/*"
   ],
   "scripts": {

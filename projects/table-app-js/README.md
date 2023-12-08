@@ -1,8 +1,12 @@
-# React + Vite
+# table-app-js
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 部署
 
-Currently, two official plugins are available:
+```sh
+# 构建
+docker build -t fullstack:table-app-js .
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# 运行
+docker run -it -p 4200:4200 fullstack:table-app-js
+
+```

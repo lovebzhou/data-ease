@@ -2,6 +2,7 @@
 packages:
   # all packages in direct subdirs of packages/
   - 'projects/*'
+  - 'demos/*'
   - 'packages/*'
   # all packages in subdirs of components/
   # - 'components/**'
