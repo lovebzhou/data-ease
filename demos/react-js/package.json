@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "dev:docker": "docker run -it -p 8081:80 --name demo-react-js-1 fullstack/demo-react-js:latest",
-    "build": "tsc && vite build",
-    "build:docker": "docker build -t fullstack/demo-react-js:latest .",
+    "dev:docker": "docker run -it -p 8081:80 -d --name demo-react-js-1 fullstack/demo-react-js:nginx-v1",
+    "build": "vite build",
+    "build:docker": "docker build -t fullstack/demo-react-js:nginx-v1 .",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },

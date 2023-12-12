@@ -33,9 +33,9 @@ export default {
 
 ```sh
 # 构建镜像
-docker build -t fullstack/demo-react-ts:latest .
+docker build -t fullstack/demo-react-ts:nginx-v1 .
 
 # 创建并运行容器
-docker run -it -p 8080:8080 --name demo-react-ts-1 fullstack/demo-react-ts
+docker run -it -p 8080:8080 --name demo-react-ts-1 fullstack/demo-react-ts/nginx-v1
 
 ```
