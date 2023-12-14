@@ -7,10 +7,13 @@ import {
 } from 'typeorm';
 import { Permission } from 'src/modules/permission/entities/permission.entity';
 
-@Entity()
+@Entity('roles')
 export class Role {
   @PrimaryGeneratedColumn()
   id: number;
+
+  @Column({ length: 30 })
+  code: string;
 
   @Column({ length: 30 })
   name: string;

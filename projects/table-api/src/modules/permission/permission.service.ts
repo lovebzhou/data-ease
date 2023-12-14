@@ -1,4 +1,8 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import {
+  BadRequestException,
+  Injectable,
+  NotFoundException,
+} from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { CreatePermissionDto } from './dto/create-permission.dto';
@@ -13,6 +17,15 @@ export class PermissionService {
   ) {}
 
   create(createPermissionDto: CreatePermissionDto) {
+    const exist = this.permissionRepo.findOneBy({
+      code: createPermissionDto.code,
+      name: createPermissionDto.name,
+    });
+
+    if (exist) {
+      throw new BadRequestException('权限已存在（权限名和权限编码不能重复）');
+    }
+
     return this.permissionRepo.save(createPermissionDto);
   }
 
