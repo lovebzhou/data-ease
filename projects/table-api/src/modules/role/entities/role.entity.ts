@@ -12,7 +12,7 @@ export class Role {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({ length: 30 })
   name: string;
 
   @ManyToMany(() => Permission)

@@ -38,6 +38,16 @@ $ pnpm run test:e2e
 $ pnpm run test:cov
 ```
 
+### repl
+
+```bash
+# 启动repl模式
+pnpm start:repl
+
+# 进入repl模式后，执行debug()会打印所有的 module 及之下的 controllers 和 providers
+>debug()
+```
+
 ## License
 
 Nest is [MIT licensed](LICENSE).
